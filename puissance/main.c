@@ -1,10 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*recursive*/
+int call(int nb)
+{
+	static int p = 1;
+
+	if (op == 0)
+		return (1);
+	else
+		{
+			p = op * nb;
+			/*
+			// 1 = 0 p nb
+			// nb = 1 * nb 
+			// nb * nb = 1 * nb * nb
+			*/	
+			return (call(nb, ..............));
+		}
+}
+
 /*iterative*/
 int	call(int nb, int op)
 {
-	static int p = 1; /*P est pour puissance*/
+	static int p = 1; /*p est pour puissance*/
 
 	while (op > 0)
 		{
@@ -13,9 +32,9 @@ int	call(int nb, int op)
 			op --;
 			/*nb diminue a chaque tour de boucle, le minimun etant nb = 0
 			// p minimum est de 1 car :
-						2 * 0 = 1
-						2 * 1 = 1 * 2
-						2 * 2 * 2 = 1 * 2 * 2 * 2
+						2 p 0 = 1
+						2 p 1 = 1 * 2
+						2 p 2 = 1 * 2 * 2 * 2
 			//
 			*/
 		}
