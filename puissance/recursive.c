@@ -2,30 +2,25 @@
 #include <stdlib.h>
 
 /*recursive*/
-int call(int nb, int op)
+int call(int number, int power)
 {
-	/*nb = 2 op = 3*/
-	static int p = 1;
+	static int result = 1;
 
-	if (op == 1)
-		return (p); /*si a puissance 0 alors vaut 1*/
-	else
-		{
-			/*sinon vaut nb * nb N fois*/
-			return ((nb * p) * op --);
-			/*on veut op--*/
-		}
+	if (power == 1)
+		return (result); /*si a puissance 0 alors vaut 1*/
+	result = result * number;
+	printf("Count result :%d\n", result);
+	return (call(result, power-1));
 }
 
 int	main(int argc, char **argv)
 {
-	int nb = 2;
-	int op = 4;
+	int number;
+	int power;
 
-	nb = atoi(argv[1]);
-	op = atoi(argv[2]);
-
-	printf("Power of %d, %d : \n", nb, op);
-
-	printf("%d", call(nb, op));
+	number = atoi(argv[1]);
+	power = atoi(argv[2]);
+	printf("Result of : %dpow(%d) \t %d\n", number, power, call(number, power));
+	(void)argc;
+	return 0x0;
 }
