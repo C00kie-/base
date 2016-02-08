@@ -2,23 +2,21 @@
 #include <stdlib.h>
 
 /*recursive*/
-int call(int nb)
+int call(int nb, int op)
 {
+	/*nb = 2 op = 3*/
 	static int p = 1;
 
-	if (op == 0)
-		return (1);
+	if (op == 1)
+		return (p); /*si a puissance 0 alors vaut 1*/
 	else
 		{
-			p = op * nb;
-			/*
-			// 1 = 0 p nb
-			// nb = 1 * nb 
-			// nb * nb = 1 * nb * nb
-			*/	
-			return (call(nb, ..............));
+			/*sinon vaut nb * nb N fois*/
+			return ((nb * p) * op --);
+			/*on veut op--*/
 		}
 }
+
 int	main(int argc, char **argv)
 {
 	int nb = 2;

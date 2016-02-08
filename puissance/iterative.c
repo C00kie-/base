@@ -1,24 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*recursive*/
-int call(int nb)
-{
-	static int p = 1;
 
-	if (op == 0)
-		return (1);
-	else
-		{
-			p = op * nb;
-			/*
-			// 1 = 0 p nb
-			// nb = 1 * nb 
-			// nb * nb = 1 * nb * nb
-			*/	
-			return (call(nb, ..............));
-		}
-}
 
 /*iterative*/
 int	call(int nb, int op)
