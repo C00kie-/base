@@ -6,7 +6,7 @@
 /*   By: pbourmea <pbourmea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 21:17:57 by pbourmea          #+#    #+#             */
-/*   Updated: 2016/01/28 23:04:32 by pbourmea         ###   ########.fr       */
+/*   Updated: 2016/02/08 12:10:31 by pbourmea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(void)
 	int nb;
 
 	/*change la valeur de nb pour tester la factorielle*/
-	nb = 0;
+	nb = 4;
 
 
 	printf("%d", call(nb));
